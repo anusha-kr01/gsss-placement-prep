@@ -1,0 +1,366 @@
+/* Reset + Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+  color: #f0f0f0;
+  line-height: 1.6;
+  padding-bottom: 5em;
+  background-attachment: fixed;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #000000 0%, #222222 100%);
+  padding: 2em 1em;
+  color: white;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.05);
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 15px #00ffff50;
+}
+
+/* Navigation */
+nav {
+  margin-top: 1em;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: #00ffff;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Main Content */
+main {
+  padding: 2em 1em;
+  text-align: center;
+}
+
+/* Cards */
+.story-card,
+.resource-card {
+  background: linear-gradient(145deg, #1c1c1c, #121212);
+  margin: 2em auto;
+  padding: 1.8em;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.05), 0 0 5px rgba(0, 0, 0, 0.5);
+  max-width: 750px;
+  text-align: left;
+  border: 1px solid #333;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover,
+.resource-card:hover {
+  transform: scale(1.01);
+}
+
+.story-card h3,
+.resource-card h3 {
+  color: #fff;
+  margin-bottom: 0.5em;
+  font-size: 1.4rem;
+}
+
+.story-card p,
+.resource-card p {
+  color: #ccc;
+  margin: 0.5em 0;
+}
+
+.story-card a,
+.resource-card a {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+/* Forms */
+form input,
+form select,
+form textarea {
+  width: 90%;
+  max-width: 700px;
+  margin: 10px auto;
+  display: block;
+  padding: 0.9em;
+  background: #111;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 1em;
+  padding: 0.8em 2em;
+  background: linear-gradient(to right, #00ffff, #0077ff);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ffff60;
+}
+
+form button:hover {
+  background: white;
+  color: #000;
+  box-shadow: 0 0 20px #00ffffaa;
+}
+
+/* Chat Section */
+.chat-container {
+  max-width: 750px;
+  margin: 3em auto;
+  text-align: center;
+}
+
+#responseArea {
+  margin-top: 2em;
+  background: #0f0f0f;
+  color: #ccc;
+  padding: 1.2em;
+  border-radius: 14px;
+  box-shadow: inset 0 0 10px #000;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+/* Footer */
+footer {
+  background: #000000;
+  padding: 1.2em;
+  color: #aaa;
+  font-size: 0.9em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #333;
+  text-align: center;
+  box-shadow: 0 -5px 15px rgba(0, 255, 255, 0.1);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffff;
+}
+
+/* Glow Badge Button */
+.glow-button {
+  margin: 1.5em auto;
+  display: inline-block;
+  padding: 0.8em 2.5em;
+  font-size: 1.1rem;
+  background: #111;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #00ffff80;
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  background: #00ffff;
+  color: black;
+  box-shadow: 0 0 20px #00ffffaa, 0 0 40px #00ffff80;
+}
+
+
+
+
+
+/* Media Queries for Responsive Design */
+
+/* Mobile Devices (≤600px) */
+@media screen and (max-width: 600px) {
+  /* Header */
+  header {
+    padding: 1.5em 0.5em;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  /* Navigation */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.5em 0;
+    font-size: 0.9rem;
+  }
+
+  /* Main Content */
+  main {
+    padding: 1em 0.5em;
+  }
+
+  /* Cards */
+  .story-card,
+  .resource-card {
+    max-width: 90%;
+    padding: 1.2em;
+    margin: 1em auto;
+  }
+
+  .story-card h3,
+  .resource-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .story-card p,
+  .resource-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Forms */
+  form input,
+  form select,
+  form textarea {
+    width: 95%;
+    padding: 0.7em;
+    font-size: 0.9rem;
+  }
+
+  form button {
+    padding: 0.7em 1.5em;
+    font-size: 0.9rem;
+  }
+
+  /* Chat Section */
+  .chat-container {
+    max-width: 90%;
+    margin: 2em auto;
+  }
+
+  #responseArea {
+    padding: 1em;
+    font-size: 0.85rem;
+  }
+
+  /* Glow Button */
+  .glow-button {
+    padding: 0.7em 2em;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1em;
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet Devices (601px–900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  /* Header */
+  header {
+    padding: 1.8em 1em;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Navigation */
+  nav a {
+    margin: 0 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Main Content */
+  main {
+    padding: 1.5em 1em;
+  }
+
+  /* Cards */
+  .story-card,
+  .resource-card {
+    max-width: 80%;
+    padding: 1.5em;
+  }
+
+  .story-card h3,
+  .resource-card h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Forms */
+  form input,
+  form select,
+  form textarea {
+    width: 90%;
+    padding: 0.8em;
+    font-size: 0.95rem;
+  }
+
+  form button {
+    padding: 0.8em 1.8em;
+  }
+
+  /* Chat Section */
+  .chat-container {
+    max-width: 80%;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1em;
+  }
+}

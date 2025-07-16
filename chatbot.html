@@ -1,0 +1,116 @@
+
+<!-- chatbot.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Mentor - Placement Assistant</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .chat-hero {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(10,10,10,0.95)),
+                  url('https://images.unsplash.com/photo-1617292956063-3ac2e3e4aa5e?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 4em 2em 2em;
+      text-align: center;
+      color: #fafbfb;
+    }
+
+    .chat-hero h2 {
+      font-size: 2.2rem;
+      margin-bottom: 0.3em;
+      text-shadow: 0 0 12px #9c9e9eaa;
+    }
+
+    .chat-container {
+      max-width: 800px;
+      margin: 3em auto;
+      background: #0f0f0f;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.05);
+    }
+
+    #userInput {
+      width: 100%;
+      padding: 1em;
+      background: #111;
+      color: #fafafa;
+      border: 1px solid #00ffff80;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-family: 'Courier New', monospace;
+      resize: none;
+      box-shadow: inset 0 0 5px #00ffff33;
+    }
+
+    #userInput::placeholder {
+      color: #888;
+    }
+
+    #askBtn {
+      margin-top: 1em;
+      padding: 0.8em 2em;
+      background: #00ffff20;
+      color: #f7fcfc;
+      font-weight: bold;
+      border: 1px solid #00ffff80;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    #askBtn:hover {
+      background: #fefdfd;
+      color: #000;
+    }
+
+    #responseArea {
+      margin-top: 2em;
+      padding: 1.5em;
+      background: #101010;
+      color: #ccffcc;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      border-left: 4px solid #232525;
+      box-shadow: inset 0 0 10px #00ffcc30;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI Mentor Chat</h1>
+    <nav>
+      <a href='index.html'>Home</a>
+      <a href='submit.html'>Submit Story</a>
+      <a href='stories.html'>All Stories</a>
+      <a href='resources.html'>Resources</a>
+      <a href='chatbot.html'>AI Mentor</a>
+      <a href='tools.html'>Google's tools</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="chat-hero">
+      <h2> Talk to the AI Mentor</h2>
+      <p>Ask anything about placements, prep tips, or roadmap guidance. Gemini is here to help.
+        <br> PS: this part still needs to be modified.<br>
+      </p>
+    </section>
+
+    <section class="chat-container">
+      <textarea id="userInput" rows="4" placeholder="Ask the AI Mentor anything about placements..."></textarea>
+      <button id="askBtn">Ask Gemini</button>
+      <div id="responseArea"></div>
+    </section>
+  </main>
+
+  
+
+  <script type="module" src="js/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+
+<!-- stories.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Placement Stories</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .stories-header {
+      background: linear-gradient(to right, #000, #111);
+      padding: 3em 1em;
+      text-align: center;
+      color: #feffff;
+      text-shadow: 0 0 10px #00ffff80;
+    }
+
+    .stories-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5em;
+    }
+
+    .filter-section {
+      background: #141414;
+      padding: 2em;
+      text-align: center;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .filter-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1em;
+      color: #eee;
+    }
+
+    .filter-section select {
+      background: #111;
+      color: #d4dada;
+      border: 1px solid #f3f5f560;
+      border-radius: 10px;
+      padding: 0.6em 1em;
+      font-size: 1rem;
+      margin: 0 1em;
+      transition: border 0.3s ease;
+    }
+
+    .filter-section select:focus {
+      outline: none;
+      border-color: #232525;
+      box-shadow: 0 0 10px #fbfcfc88;
+    }
+
+    #storiesContainer {
+      padding: 3em 1em;
+    }
+
+    .story-card {
+      background: #1e1e1e;
+      margin: 1.5em auto;
+      padding: 1.5em;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      max-width: 700px;
+      text-align: left;
+      border: 1px solid #333;
+      transition: all 0.3s ease;
+    }
+
+    .story-card h3 {
+      color: #00ffff;
+    }
+
+    .story-card p {
+      color: #ddd;
+      margin: 0.3em 0;
+    }
+
+    .story-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Placement Stories</h1>
+    <nav>
+      <a href='index.html'>Home</a>
+      <a href='submit.html'>Submit Story</a>
+      <a href='stories.html'>All Stories</a>
+      <a href='resources.html'>Resources</a>
+      <a href='chatbot.html'>AI Mentor</a>
+      <a href='tools.html'>Google's tools</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="stories-header">
+      <h1>Placement Stories from GSSSians</h1>
+      <p>Browse stories by branch or role. Get inspired and take notes.</p>
+    </section>
+
+    <section class="filter-section">
+      <h2>Filter by Branch & Role</h2>
+      <select id="branchFilter">
+        <option value="">All Branches</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="Mech">Mech</option>
+        <option value="Civil">Civil</option>
+      </select>
+
+      <select id="roleFilter">
+        <option value="">All Roles</option>
+        <option value="Product Based">Product Based</option>
+        <option value="Service Based">Service Based</option>
+      </select>
+    </section>
+
+    <section id="storiesContainer">
+      <!-- Stories load here -->
+    </section>
+  </main>
+
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/stories.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<!-- submit.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Your Placement Story</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Submit Your Story</h1>
+    <nav>
+      <a href='index.html'>Home</a>
+      <a href='submit.html'>Submit Story</a>
+      <a href='stories.html'>All Stories</a>
+      <a href='resources.html'>Resources</a>
+      <a href='chatbot.html'>AI Mentor</a>
+      <a href='tools.html'>Google's tools</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="storyForm">
+  <input type="text" id="name" placeholder="Your Name" required><br>
+  <input type="text" id="branch" placeholder="Branch" required><br>
+  <input type="number" id="year" placeholder="Year" required><br>
+  <input type="text" id="company" placeholder="Company" required><br>
+  <select id="roleType" required>
+    <option value="">Role Type</option>
+    <option value="Service Based">Service Based</option>
+    <option value="Product Based">Product Based</option>
+  </select><br>
+  <textarea id="story" placeholder="Your Placement Journey" required></textarea><br>
+  <input type="text" id="platforms" placeholder="Platforms (e.g., LeetCode, GFG)" required><br>
+  <button type="submit">Submit</button>
+  <p id="submitMsg"></p>
+</form>
+
+
+    <p id="successMessage" style="color: rgb(236, 238, 236); font-weight: bold;"></p>
+  </main>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/submit.js"></script>
+</body>
+</html>
+
+
